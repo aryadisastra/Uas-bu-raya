@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas_arisrzld_xiirplb.ArisManagerController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DEEPSKYBLUE" height="632.0" layoutX="24.0" layoutY="26.0" strokeType="INSIDE" width="952.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#7a6da6" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <Label layoutX="395.0" layoutY="200.0" text="SELAMAT DATANG">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblhal" layoutX="840.0" layoutY="611.0" text="*Hal Manager">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblnama" layoutX="424.0" layoutY="342.0" text="ARIS RIZALDI">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblkelas" layoutX="449.0" layoutY="384.0" text="XII RPL B">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblaks" layoutX="441.0" layoutY="265.0" text="MANAGER">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblnis" layoutX="423.0" layoutY="303.0" text="ARIS RIZALDI">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="paneCrud" prefHeight="683.0" prefWidth="1000.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DEEPSKYBLUE" height="632.0" layoutX="24.0" layoutY="26.0" strokeType="INSIDE" width="952.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#7a6da6" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Rectangle>
+            <Button fx:id="btnDelete" layoutX="648.0" layoutY="297.0" mnemonicParsing="false" onAction="#deleteDataPegawaiDariDatabase" prefHeight="25.0" prefWidth="81.0" text="HAPUS" />
+            <Button fx:id="btnUpdate" layoutX="543.0" layoutY="297.0" mnemonicParsing="false" onAction="#updateDataPegawaiDariDatabase" prefHeight="25.0" prefWidth="81.0" text="UBAH" />
+            <TableView fx:id="tablePegawai" layoutX="108.0" layoutY="349.0" onMouseClicked="#showOnClick" prefHeight="236.0" prefWidth="805.0">
+               <columns>
+                  <TableColumn fx:id="columnID" prefWidth="83.0" text="ID SISWA" />
+                  <TableColumn fx:id="columnNama" minWidth="9.0" prefWidth="148.0" text="NAMA SISWA" />
+                  <TableColumn fx:id="columnAlamat" prefWidth="168.0" text="JURUSAN" />
+                  <TableColumn fx:id="columnNohp" prefWidth="133.0" text="KELAS" />
+                  <TableColumn fx:id="columnJabatan" minWidth="0.0" prefWidth="124.0" text="JENIS KELAMIN" />
+                  <TableColumn fx:id="columnAgama" prefWidth="148.0" text="TANGGAL PINJAM" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnKembali" layoutX="61.0" layoutY="630.0" mnemonicParsing="false" onAction="#KePaneHadir" prefHeight="25.0" prefWidth="80.0" text="Kembali" />
+            <TextField fx:id="fieldNama" layoutX="198.0" layoutY="183.0" onKeyReleased="#gaBisaKetikAngka" prefHeight="25.0" prefWidth="213.0" promptText=" NAMA LENGKAP" />
+            <Button fx:id="btnTampilkanData" layoutX="645.0" layoutY="31.0" mnemonicParsing="false" onAction="#TampilkanDataDariDatabase" opacity="0.0" prefHeight="25.0" prefWidth="114.0" text="TampilkanData" />
+            <Label layoutX="102.0" layoutY="186.0" text="NAMA LENGKAP" />
+            <Label layoutX="103.0" layoutY="221.0" text="JURUSAN" />
+            <TextField fx:id="fieldSearch" layoutX="709.0" layoutY="92.0" onInputMethodTextChanged="#searchUser" onKeyReleased="#searchUser" prefHeight="25.0" prefWidth="261.0" promptText="Search" />
+            <Label fx:id="tgl" layoutX="342.0" layoutY="123.0" text="Label" visible="false" />
+            <Label layoutX="103.0" layoutY="257.0" text="KELAS" />
+            <TextField fx:id="fieldKelas" layoutX="198.0" layoutY="253.0" onKeyReleased="#gaBisaKetikHuruf" prefHeight="25.0" prefWidth="213.0" promptText="MASUKAN KELAS" />
+            <Label layoutX="880.0" layoutY="634.0" text="*Hal Admin">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="395.0" layoutY="67.0" text="Data Peminjaman">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="jabatan" layoutX="198.0" layoutY="217.0" onAction="#jabatan" prefHeight="25.0" prefWidth="213.0" promptText="====JURUSAN====" />
+            <Label layoutX="468.0" layoutY="186.0" text="TANGGAL PINJAM" />
+            <TextField fx:id="idJab" layoutX="760.0" layoutY="183.0" prefHeight="25.0" prefWidth="66.0" promptText="IdJabatan" visible="false" />
+            <TextField fx:id="fieldID" editable="false" layoutX="198.0" layoutY="145.0" onKeyReleased="#gaBisaKetikHuruf" prefHeight="25.0" prefWidth="213.0" promptText="ID " />
+            <Label layoutX="103.0" layoutY="149.0" text="ID SISWA" />
+            <Button fx:id="btnTambah" layoutX="440.0" layoutY="297.0" mnemonicParsing="false" onAction="#TambahDataKeDataBase" prefHeight="25.0" prefWidth="81.0" text="TAMBAH" />
+            <Label layoutX="468.0" layoutY="149.0" text="JENIS KELAMIN" />
+            <RadioButton fx:id="laki" layoutX="573.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#lakiklik" text="Laki - Laki">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="perempuan" layoutX="680.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#cwklik" text="Perempuan" toggleGroup="$gender" />
+            <Label fx:id="lblgndr" layoutX="89.0" layoutY="59.0" text="Label" visible="false" />
+            <Label fx:id="lbljurusan" layoutX="75.0" layoutY="84.0" text="Label" visible="false" />
+            <TextField fx:id="dtepinjam" layoutX="574.0" layoutY="183.0" prefHeight="25.0" prefWidth="199.0" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="817.0" layoutY="40.0" mnemonicParsing="false" onAction="#klikWarung" text="WARUNG" />
+      <Button layoutX="898.0" layoutY="40.0" mnemonicParsing="false" onAction="#outKlik" text="LOGOUT" />
+   </children>
+</AnchorPane>

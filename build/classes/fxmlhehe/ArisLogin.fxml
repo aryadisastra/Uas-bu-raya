@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas_arisrzld_xiirplb.ArisLoginController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DEEPSKYBLUE" height="632.0" layoutX="24.0" layoutY="34.0" strokeType="INSIDE" width="952.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#7a6da6" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <TextField fx:id="txtId" layoutX="407.0" layoutY="325.0" onKeyReleased="#gaBisaKetikScript" prefHeight="25.0" prefWidth="324.0" />
+      <PasswordField fx:id="txtPass" layoutX="406.0" layoutY="369.0" onKeyReleased="#gaBisaKetikScriptt" prefHeight="25.0" prefWidth="324.0" />
+      <Label layoutX="293.0" layoutY="327.0" text="Nama Pengguna">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="371.0" text="Kata Sandi">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="266.0" text="Login Admin">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnMasuk" layoutX="605.0" layoutY="436.0" mnemonicParsing="false" onAction="#actionMasuk" prefHeight="25.0" prefWidth="126.0" text="Masuk" />
+      <Label fx:id="notif" layoutX="361.0" layoutY="144.0" />
+      <Button fx:id="btnKembali" layoutX="406.0" layoutY="436.0" mnemonicParsing="false" onAction="#KePaneHakAkses" prefHeight="25.0" prefWidth="126.0" text="Kembali" />
+   </children>
+</AnchorPane>

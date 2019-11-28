@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneHakAkses" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas_arisrzld_xiirplb.ArisHakAksesController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DEEPSKYBLUE" height="632.0" layoutX="24.0" layoutY="34.0" strokeType="INSIDE" width="952.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#7a6da6" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <Button fx:id="btnAdmin" layoutX="402.0" layoutY="366.0" mnemonicParsing="false" onAction="#KePaneAdmin" prefHeight="39.0" prefWidth="196.0" text="ADMIN">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSiswa" layoutX="402.0" layoutY="236.0" mnemonicParsing="false" onAction="#KePaneSiswa" prefHeight="39.0" prefWidth="196.0" text="SISWA">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnManager" layoutX="402.0" layoutY="301.0" mnemonicParsing="false" onAction="#KePaneManager" prefHeight="39.0" prefWidth="196.0" text="MANAGER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

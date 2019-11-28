@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneAdmin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arisrzldta.ArisTambahPegawaiController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DEEPSKYBLUE" height="632.0" layoutX="24.0" layoutY="34.0" strokeType="INSIDE" width="952.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#7a6da6" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <Button fx:id="btnDelete" layoutX="638.0" layoutY="287.0" mnemonicParsing="false" onAction="#deleteDataPegawaiDariDatabase" prefHeight="25.0" prefWidth="81.0" text="HAPUS" />
+      <Button fx:id="btnUpdate" layoutX="533.0" layoutY="287.0" mnemonicParsing="false" onAction="#updateDataPegawaiDariDatabase" prefHeight="25.0" prefWidth="81.0" text="UBAH" />
+      <TableView fx:id="tablePegawai" layoutX="98.0" layoutY="339.0" onMouseClicked="#showOnClick" prefHeight="236.0" prefWidth="805.0">
+         <columns>
+            <TableColumn fx:id="columnID" prefWidth="83.0" text="ID SISWA" />
+            <TableColumn fx:id="columnNama" minWidth="9.0" prefWidth="148.0" text="NAMA SISWA" />
+            <TableColumn fx:id="columnAlamat" prefWidth="168.0" text="JURUSAN" />
+            <TableColumn fx:id="columnNohp" prefWidth="133.0" text="KELAS" />
+            <TableColumn fx:id="columnJabatan" minWidth="0.0" prefWidth="124.0" text="JENIS KELAMIN" />
+            <TableColumn fx:id="columnAgama" prefWidth="148.0" text="TANGGAL PINJAM" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnKembali" layoutX="51.0" layoutY="620.0" mnemonicParsing="false" onAction="#KePaneHadir" prefHeight="25.0" prefWidth="80.0" text="Kembali" />
+      <TextField fx:id="fieldNama" layoutX="188.0" layoutY="173.0" onKeyReleased="#gaBisaKetikAngka" prefHeight="25.0" prefWidth="213.0" promptText=" NAMA LENGKAP" />
+      <Button fx:id="btnTampilkanData" layoutX="635.0" layoutY="21.0" mnemonicParsing="false" onAction="#TampilkanDataDariDatabase" opacity="0.0" prefHeight="25.0" prefWidth="114.0" text="TampilkanData" />
+      <Label layoutX="92.0" layoutY="176.0" text="NAMA LENGKAP" />
+      <Label layoutX="93.0" layoutY="211.0" text="JURUSAN" />
+      <TextField fx:id="fieldSearch" layoutX="699.0" layoutY="82.0" onInputMethodTextChanged="#searchUser" onKeyReleased="#searchUser" prefHeight="25.0" prefWidth="261.0" promptText="Search" />
+      <Label fx:id="tgl" layoutX="332.0" layoutY="113.0" text="Label" visible="false" />
+      <Label layoutX="93.0" layoutY="247.0" text="KELAS" />
+      <TextField fx:id="fieldKelas" layoutX="188.0" layoutY="243.0" onKeyReleased="#gaBisaKetikHuruf" prefHeight="25.0" prefWidth="213.0" promptText="MASUKAN KELAS" />
+      <Label layoutX="870.0" layoutY="624.0" text="*Hal Admin">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="385.0" layoutY="57.0" text="Data Peminjaman">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="jabatan" layoutX="188.0" layoutY="207.0" onAction="#jabatan" prefHeight="25.0" prefWidth="213.0" promptText="====JURUSAN====" />
+      <Label layoutX="458.0" layoutY="176.0" text="TANGGAL PINJAM" />
+      <TextField fx:id="idJab" layoutX="750.0" layoutY="173.0" prefHeight="25.0" prefWidth="66.0" promptText="IdJabatan" visible="false" />
+      <TextField fx:id="fieldID" editable="false" layoutX="188.0" layoutY="135.0" onKeyReleased="#gaBisaKetikHuruf" prefHeight="25.0" prefWidth="213.0" promptText="ID " />
+      <Label layoutX="93.0" layoutY="139.0" text="ID SISWA" />
+      <Button fx:id="btnTambah" layoutX="430.0" layoutY="287.0" mnemonicParsing="false" onAction="#TambahDataKeDataBase" prefHeight="25.0" prefWidth="81.0" text="TAMBAH" />
+      <Label layoutX="458.0" layoutY="139.0" text="JENIS KELAMIN" />
+      <RadioButton layoutX="563.0" layoutY="139.0" mnemonicParsing="false" text="Laki - Laki" />
+      <RadioButton layoutX="670.0" layoutY="139.0" mnemonicParsing="false" text="Perempuan" />
+      <DatePicker layoutX="564.0" layoutY="173.0" prefHeight="25.0" prefWidth="213.0" />
+   </children>
+</AnchorPane>
